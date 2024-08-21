@@ -18,7 +18,7 @@ export const UserButton = () => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger>
-        <Avatar>
+        <Avatar className="w-[48px] h-[48px]">
           <AvatarImage src={user?.image || ""} />
           <AvatarFallback className="bg-sky-500 text-white">
             {user?.name?.slice(0, 2).toUpperCase()}
@@ -26,7 +26,7 @@ export const UserButton = () => {
         </Avatar>
       </DropdownMenuTrigger>
 
-      <DropdownMenuContent className="w-40" align="end">
+      <DropdownMenuContent className="w-40" align="end" side="right">
         <LogoutButton>
           <DropdownMenuItem>
             <LogOut className="w-4 h-4" />
