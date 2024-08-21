@@ -6,6 +6,7 @@ import { Toaster } from "@/components/ui/sonner";
 import "./globals.css";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import { cn } from "@/lib/utils";
+import { ModalProvider } from "@/components/providers/modal-provider";
 
 const font = Open_Sans({ subsets: ["latin"] });
 
@@ -30,6 +31,7 @@ export default async function RootLayout({
             storageKey="discord-theme"
           >
             <Toaster />
+            <ModalProvider />
             {children}
           </ThemeProvider>
         </body>
