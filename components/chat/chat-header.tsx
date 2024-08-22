@@ -1,4 +1,4 @@
-import { Hash, Menu } from "lucide-react";
+import { Hash } from "lucide-react";
 
 import { MobileToggel } from "@/components/mobile-toggel";
 import { UserAvatar } from "@/components/user-avatar";

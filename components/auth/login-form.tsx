@@ -129,7 +129,7 @@ export const LoginForm = () => {
                   render={({ field }) => {
                     return (
                       <FormItem>
-                        <FormLabel>Email</FormLabel>
+                        <FormLabel>Password</FormLabel>
                         <FormControl>
                           <Input
                             {...field}
