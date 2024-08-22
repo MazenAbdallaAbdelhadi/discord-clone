@@ -56,6 +56,8 @@ export const ServerSidebar = async ({ serverId }: ServerSidebarProps) => {
     },
   });
 
+  
+
   const textChannels = server?.channels.filter(
     (ch) => ch.type === ChannelType.TEXT
   );
@@ -65,6 +67,8 @@ export const ServerSidebar = async ({ serverId }: ServerSidebarProps) => {
   const videoChannels = server?.channels.filter(
     (ch) => ch.type === ChannelType.VIDEO
   );
+
+  
 
   const members = server?.members.filter(
     (member) => member.profileId !== profile?.id
@@ -180,7 +184,7 @@ export const ServerSidebar = async ({ serverId }: ServerSidebarProps) => {
             <div className="space-y-[2px]">
               {videoChannels?.map((channel) => (
                 <ServerChannel
-                  key={channel.id}
+                  key={channel?.id}
                   channel={channel}
                   server={server}
                   role={role}
@@ -200,6 +204,7 @@ export const ServerSidebar = async ({ serverId }: ServerSidebarProps) => {
             <div className="space-y-[2px]">
               {members?.map((member) => (
                 <ServerMember
+                  key={member?.id}
                   member={member}
                   server={server}
                 />
