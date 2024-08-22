@@ -10,7 +10,7 @@ interface UserAvatarProps {
 export const UserAvatar = ({ className, src, name }: UserAvatarProps) => {
   return (
     <Avatar className={cn("h-7 w-7 md:h-10 md:w-10", className)}>
-      <AvatarFallback className="text-white text-xs">
+      <AvatarFallback className="dark:text-white text-zinc-700 font-semibold  text-xs">
         {name.slice(0, 2).toUpperCase()}
       </AvatarFallback>
       <AvatarImage src={src} />
