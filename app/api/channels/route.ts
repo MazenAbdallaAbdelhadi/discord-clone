@@ -1,11 +1,11 @@
-import { useCurrentUser } from "@/hooks/use-current-user";
+import { currentUser } from "@/lib/auth";
 import { db } from "@/lib/db";
 import { MemberRole } from "@prisma/client";
 import { NextResponse } from "next/server";
 
 export async function POST(req: Request) {
   try {
-    const profile = await useCurrentUser();
+    const profile = await currentUser();
     const { name, type } = await req.json();
     const { searchParams } = new URL(req.url);
 
