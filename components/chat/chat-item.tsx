@@ -87,7 +87,7 @@ export const ChatItem = ({
     form.reset({
       content: content,
     });
-  }, [content]);
+  }, [content,form]);
 
   const fileType = fileUrl?.split(".").pop();
 
@@ -165,6 +165,8 @@ export const ChatItem = ({
                 alt={content}
                 fill
                 className="object-cover"
+                width={192}
+                height={192}
               />
             </a>
           )}

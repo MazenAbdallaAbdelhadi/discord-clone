@@ -7,7 +7,7 @@ import { useSearchParams } from "next/navigation";
 
 export default function Social() {
   const searchParams = useSearchParams();
-  const callbackUrl = searchParams.get('callbackUrl');
+  const callbackUrl = searchParams?.get('callbackUrl');
   
   const onClick = (provider: "google") => {
     signIn(provider, {
